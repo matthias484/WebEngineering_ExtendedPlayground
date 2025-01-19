@@ -1,5 +1,20 @@
 # React + TypeScript + Vite
 
+## How to Start the Application
+
+### Start Dev Environment
+To start the development environment, use the command: `docker-compose -f docker-compose.yml up --build`.
+
+### Start Prod Environment
+To start the production environment, use the command: `docker-compose -f docker-compose.prod.yml up --build`.
+
+_
+.
+_
+.
+_
+
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
