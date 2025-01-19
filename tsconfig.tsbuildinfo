@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/beardata.ts","./src/vite-env.d.ts","./src/vite.config.ts","./src/backend/server.ts","./src/components/comments.tsx","./src/components/footer.tsx","./src/components/header.tsx","./src/components/navbar.tsx","./src/frontend/about.tsx","./src/frontend/bears.tsx","./src/frontend/home.tsx","./src/frontend/main.tsx"],"version":"5.7.3"}

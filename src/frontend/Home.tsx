@@ -1,7 +1,9 @@
 import React from 'react';
+// @ts-ignore
 import wildBear from '../assets/wild-bear.jpg';
+// @ts-ignore
 import urbanBear from '../assets/urban-bear.jpg';
-import '../index.css';
+import '../../index.css';
 
 const Home: React.FC = () => {
     return (

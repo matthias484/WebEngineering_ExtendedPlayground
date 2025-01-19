@@ -1,22 +1,21 @@
-version: "3.9"
-
+version: '3.9'
 services:
   frontend:
     build:
       context: .
-      dockerfile: src/frontend/Dockerfile
-      target: production
+      dockerfile: Dockerfile
+      target: frontend-prod
     ports:
-      - "80:80"
+      - "3000:3000"
     environment:
       - NODE_ENV=production
 
   backend:
     build:
       context: .
-      dockerfile: src/backend/Dockerfile
-      target: production
+      dockerfile: Dockerfile
+      target: backend-prod
     ports:
-      - "3002:3000"
+      - "5000:5000"
     environment:
       - NODE_ENV=production

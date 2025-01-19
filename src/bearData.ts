@@ -1,4 +1,4 @@
-const baseUrl = 'http://localhost:3000/api/bears';
+const baseUrl = 'http://localhost:5000/api/bears';
 
 export const getBearData = async (): Promise<any> => {
     try {

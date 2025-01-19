@@ -5,13 +5,21 @@
     { "path": "./tsconfig.node.json" }
   ],
   "compilerOptions": {
-    "target": "ESNext",
-    "module": "CommonJS",
-    "moduleResolution": "node",
-    "esModuleInterop": true,
+    "target": "es6",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "outDir": "./dist",
+    "rootDir": "./src",
     "strict": true,
-    "outDir": "./dist"
+    "esModuleInterop": true,
+    "jsx": "react-jsx",
+    "allowJs": true,
+
+
+    "skipLibCheck": true,
+    "declaration": true,          // Emit .d.ts files
+    "declarationMap": true        // Include source maps for declarations
   },
-  "include": ["./src/**/*.mts"],
+  "include": ["src/**/*"],
   "exclude": ["node_modules"]
 }

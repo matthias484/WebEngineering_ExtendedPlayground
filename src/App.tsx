@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from './frontend/Home';
-import Bears from './frontend/Bears';
-import About from './frontend/About';
-import Header from './components/Header';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+import Home from './frontend/Home.js';
+import Bears from './frontend/Bears.js';
+import About from './frontend/About.js';
+import Header from './components/Header.js';
+import Navbar from './components/Navbar.js';
+import Footer from './components/Footer.js';
 import './App.css';  // Additional styling if necessary
 
 const App = () => {

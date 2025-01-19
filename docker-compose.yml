@@ -1,28 +1,26 @@
-version: "3.9"
-
+version: '3.9'
 services:
   frontend:
     build:
       context: .
-      dockerfile: src/frontend/Dockerfile
-      target: development
+      dockerfile: Dockerfile
+      target: frontend-dev
     ports:
-      - "5173:5173"
-    volumes:
-      - ./src/frontend:/app
-      - /app/node_modules
+      - "3000:3000"
     environment:
       - NODE_ENV=development
 
   backend:
     build:
       context: .
-      dockerfile: src/backend/Dockerfile
-      target: development
+      dockerfile: Dockerfile
+      target: backend-dev
     ports:
-      - "3001:3000"
-    volumes:
-      - ./src/backend:/app
-      - /app/node_modules
+      - "5000:5000"
     environment:
       - NODE_ENV=development
+    volumes:
+      - ./src/backend:/app/src/backend
+      - ./tsconfig.json:/app/tsconfig.json
+      - ./tsconfig.node.json:/app/tsconfig.node.json
+    command: [ "npx", "nodemon", "--watch", "src/backend", "--exec", "node", "--loader", "ts-node/esm", "src/backend/server.ts" ]

@@ -1,9 +1,10 @@
 import express from 'express';
 import cors from 'cors';
 import fetch from 'node-fetch';
+import { Request, Response } from 'express';
 
 const app = express();
-const port = 3000;
+const port = 5000;
 
 const baseUrl = 'https://en.wikipedia.org/w/api.php';
 const title = 'List_of_ursids';
@@ -60,7 +61,7 @@ const fetchBearData = async (): Promise<Bear[]> => {
     return bears;
 };
 
-app.get('/api/bears', async (_req, res) => {
+app.get('/api/bears', async (_req: Request, res: Response) => {
     try {
         const bears = await fetchBearData();
         res.json(bears);
