@@ -37,7 +37,14 @@ CMD ["npm", "run", "preview"]
 # Backend: Production Stage
 FROM base AS backend-prod
 WORKDIR /app
+
+# Install production dependencies
+COPY package*.json ./
 RUN npm install --only=production
-RUN npx tsc --project tsconfig.json
+RUN npm install ts-node
+
+# Use ts-node to directly run TypeScript files
+COPY tsconfig*.json ./
+COPY ./src ./src
 EXPOSE 5000
-CMD ["node", "dist/backend/server.ts"]
+CMD ["npx", "ts-node", "--esm", "src/backend/server.ts"]

@@ -6,9 +6,11 @@
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "vite build",
+    "preview": "vite preview",
+
     "backend:dev": "nodemon --watch src/backend --exec node --loader ts-node/esm src/backend/server.ts",
     "backend:build": "tsc --project src/backend/tsconfig.backend.json",
-    "backend:prod": "node dist/backend/server.js",
+    "backend:prod": "NODE_ENV=production npx ts-node --esm src/backend/server.ts",
     "lint": "eslint src/**/*.{ts,tsx}",
     "lint:fix": "eslint src/**/*.{js,ts} --fix",
     "format": "prettier --write src/**/*.{js,ts}",
